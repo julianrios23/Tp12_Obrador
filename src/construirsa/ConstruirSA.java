@@ -42,7 +42,7 @@ public class ConstruirSA {
 //        String sql1 = "INSERT INTO herramientas (nombre, descripcion, stock, estado) VALUES (?, ?, ?, ?)";
 //
 //        try (PreparedStatement ps = con.prepareStatement(sql1)) {
-//            //  materia
+//            //  herramienta
 //            ps.setString(1, "Amoladora");
 //            ps.setString(2, "De mano");
 //            ps.setInt(3, 11); 
