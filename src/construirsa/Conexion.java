@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  
- * @author Julian Development
+ * @author Julian Rios
  */
 public class Conexion {
     
