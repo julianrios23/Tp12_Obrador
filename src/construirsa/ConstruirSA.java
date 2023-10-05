@@ -1,11 +1,6 @@
 package construirsa;
 
 import java.sql.*;
-
-/**
- *
- * @author Julian Rios
- */
 public class ConstruirSA {
 
     public static void main(String[] args) {
