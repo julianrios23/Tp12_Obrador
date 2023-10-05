@@ -1,5 +1,3 @@
-
-
 package construirsa;
 
 import java.sql.*;
@@ -10,14 +8,13 @@ import java.sql.*;
  */
 public class ConstruirSA {
 
-    
     public static void main(String[] args) {
-        
-         Connection con;
+
+        Connection con;
         con = Conexion.getConexion();
-        
+
         String sql = "INSERT INTO empleado (dni, apellido, nombre, acceso, estado) VALUES (?, ?, ?, ?, ?)";
-        
+
         try (PreparedStatement ps = con.prepareStatement(sql)) {
             //empleado 1
             int dni = 40999256;
@@ -32,13 +29,12 @@ public class ConstruirSA {
             ps.setInt(4, acc);
             ps.setBoolean(5, estado);
             ps.executeUpdate();
-            
 
             System.out.println("Se cargo el empleado correctamenet");
         } catch (SQLException e) {
             System.err.println("Error al cargar datos: " + e.getMessage());
         }
-        
+
 //        String sql1 = "INSERT INTO herramientas (nombre, descripcion, stock, estado) VALUES (?, ?, ?, ?)";
 //
 //        try (PreparedStatement ps = con.prepareStatement(sql1)) {
@@ -54,7 +50,6 @@ public class ConstruirSA {
 //            System.err.println("Error al cargar datos: " + e.getMessage());
 //
 //        }
-        
     }
 
 }
