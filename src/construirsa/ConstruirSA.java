@@ -17,9 +17,9 @@ public class ConstruirSA {
 
         try (PreparedStatement ps = con.prepareStatement(sql)) {
             //empleado 1
-            int dni = 40999256;
-            String apellido = "Sbodio";
-            String nombre = "Mateo";
+            int dni = 21450;
+            String apellido = "Perez";
+            String nombre = "Juan";
             int acc = 1;
             boolean estado = true;
 
@@ -29,8 +29,35 @@ public class ConstruirSA {
             ps.setInt(4, acc);
             ps.setBoolean(5, estado);
             ps.executeUpdate();
+            //empleado2
+            int dni1 = 30256145;
+            String apellido1 = "Torrez";
+            String nombre1 = "Gabriel";
+            int acc1 = 1;
+            boolean estado1 = true;
 
-            System.out.println("Se cargo el empleado correctamenet");
+            ps.setInt(1, dni);
+            ps.setString(2, apellido);
+            ps.setString(3, nombre);
+            ps.setInt(4, acc);
+            ps.setBoolean(5, estado);
+            ps.executeUpdate();
+            //empleado3
+            int dni2 = 25037238;
+            String apellido2 = "Rios";
+            String nombre2 = "Julian";
+            int acc2 = 1;
+            boolean estado2 = true;
+
+            ps.setInt(1, dni);
+            ps.setString(2, apellido);
+            ps.setString(3, nombre);
+            ps.setInt(4, acc);
+            ps.setBoolean(5, estado);
+            ps.executeUpdate();
+            
+
+            System.out.println("Se cargaron los empleados correctamenet");
         } catch (SQLException e) {
             System.err.println("Error al cargar datos: " + e.getMessage());
         }
